@@ -1,0 +1,9 @@
+<h3>Friends Index</h3>
+
+<h4>Total friends: {{model.length}}</h4>
+
+<ul>
+  {{#each model as |friend|}}
+      <li>{{friend.lastName}}, {{friend.firstName}} </li>
+  {{/each}}
+</ul>
