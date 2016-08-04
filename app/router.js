@@ -12,6 +12,9 @@ Router.map(function() {
 
     this.route('show', {
       path: ':friend_id'
+    }, function() {
+      this.route('loans', {resetNamespace: true}, function() {
+      });
     });
 
     this.route('edit', {
@@ -19,6 +22,7 @@ Router.map(function() {
     });
 
   });
+
   this.route('articles', function() {
     this.route('new');
 
@@ -30,6 +34,7 @@ Router.map(function() {
       path: ':article_id/edit'
     });
   });
+  this.route('loans');
 });
 
 export default Router;
