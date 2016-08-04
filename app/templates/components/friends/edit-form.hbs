@@ -1,8 +1,7 @@
-<form {{action "save" model on="submit"}} class="col-8 px2 mx-auto borrowers-form">
+<form {{action "save" on="submit"}} class="col-8 px2 mx-auto borrowers-form">
   {{#if errorMessage}}
     <h2 class="white bg-red p1">{{errorMessage}}</h2>
   {{/if}}
-
   {{input value=model.firstName placeholder="First Name" class="input fit"}}<br>
   {{input value=model.lastName  placeholder="Last Name"  class="input fit"}}<br>
   {{input value=model.email     placeholder="Email"      class="input fit"}}<br>
