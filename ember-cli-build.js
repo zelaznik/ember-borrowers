@@ -14,7 +14,6 @@ module.exports = function(defaults) {
   app.import('vendor/fontello/font/fontello.woff2', {destDir: 'assets/font'});
 
   app.import('bower_components/moment/moment.js');
-  app.import('bower_components/ic-ajax/dist/named-amd/main.js');
 
   return app.toTree();
 };
