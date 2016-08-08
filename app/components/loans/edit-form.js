@@ -6,5 +6,14 @@ export default Ember.Component.extend({
     get() {
       return this.get('store').findAll('article');
     }
-  }).readOnly()
+  }).readOnly(),
+  save() {
+    this.get('model').save().then(
+      (model) => { this.back(model.get('friend')); },
+      () => { this.set('errorMessage', 'there was something wrong saving the loan'); }
+    );
+  },
+  cancel() {
+    this.back(this.get('model.friend'));
+  }
 });
