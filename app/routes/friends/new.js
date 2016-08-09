@@ -10,7 +10,7 @@ export default Ember.Route.extend({
   deactivate() {
     console.log('----- DE-activate hook called on routes/friends/new.js -----');
   },
-  resetController(controller, isExiting, transition) {
+  resetController(controller, isExiting) {
     if (isExiting) {
       console.log('----- resetController hook called on routes/friends/new.js -----');
       var model = controller.get('model');

@@ -16,7 +16,7 @@ export default Ember.Component.extend({
           () => (this.set('errorMessage', 'there was something wrong saving the model.'))
         );
       } else {
-        this.set('errorMessage', 'You have to fill all the fields.');
+        this.set('errorMessage', 'You have to fill all the fields');
       }
     },
     cancel() {
